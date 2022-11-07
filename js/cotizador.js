@@ -41,7 +41,7 @@ if (login()) {
   
 } else {
   alert(
-    "No se pudo ingresar al sistema, verifique su nombre de usuario y contraseña"
+    "No se pudo ingresar al sistema, verifique su contraseña"
   );
 }
 alert("Gracias! Hasta Luego");

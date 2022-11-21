@@ -99,9 +99,10 @@ btnIngreso.addEventListener("click", (e) => {
   for (const cliente of clientes) {
     if (cliente.mail == rUser.value && cliente.dni == rPassword.value) {
       login = true;
+    }}
+    if (login == true) {
       //Ingreso exitoso - muestra menú principal
       document.querySelector(".login").style.display = "none";
-      document.querySelector("#registrarse").style.display = "none";
       document.querySelector(".hidden").style.display = "flex";
       //Presiona btn para cotizar
       const btnCotizar = document.querySelector("#cotizar");
@@ -170,33 +171,33 @@ btnIngreso.addEventListener("click", (e) => {
           nUserTel = document.querySelector("#nUserTel"),
           nUserMail = document.querySelector("#nUserMail"),
           registrado = document.querySelector("#registrado");
-          btnEnviarDatos.addEventListener("click", (e) => {
+        btnEnviarDatos.addEventListener("click", (e) => {
           e.preventDefault();
           const cliente = new Cliente(
             nDni.value,
-            nUserName.value,
             nUserApellido.value,
+            nUserName.value,
             nUserDir.value,
             nUserTel.value,
             nUserMail.value
           );
           clientes.push(cliente);
           cliente.asignarId(clientes);
-          
-          localStorage.setItem('clienteNuevo',JSON.stringify(cliente));
-          
-          let registroRecuperado = JSON.parse(localStorage.getItem('clienteNuevo'));
+
+          localStorage.setItem("clienteNuevo", JSON.stringify(cliente));
+
+          let registroRecuperado = JSON.parse(
+            localStorage.getItem("clienteNuevo")
+          );
           let nuevoRegistro = clientes.filter(
             (cliente) => cliente.id == registroRecuperado.id
           );
-          console.log(nuevoRegistro);
-          
-         nuevoRegistro.forEach(element => {
-            registrado.innerHTML += JSON.stringify(element);
-          });
+          for (const iterator of nuevoRegistro) {
+            registrado.innerHTML = `<p> Los datos del cliente registrado son: <br> Apellido: ${iterator.apellido} <br> Nombre:${iterator.nombre} <br> Domicilio:${iterator.domicilio} <br> Teléfono:${iterator.telefono}<br> Mail: ${iterator.mail}<br> Muchas gracias por registrarse`;
+            setInterval("location.reload()", 10000);
+          }
         });
       });
     }
-    //setInterval("location.reload()", 5000);
   }
-});
+);

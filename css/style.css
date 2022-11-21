@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  list-style-type: none;
 }
 
 h1 {
@@ -21,4 +22,47 @@ p {
 
 body{
   background-color: darkgrey;
+}
+
+.hidden{
+  display:none;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  background-color: lightgrey;
+  
+}
+
+.cotizarOk{
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  margin: 15px;
+}
+#newUser{
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.nUser{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  margin: 0 auto;
+}
+.nUser input{
+  margin: 10px;
+  border-color: #000000;
+}
+#datosCliente{
+  display: none;
+  flex-direction: column;
+  align-items: center;
+}
+#registrarse{
+  display: none;
+  flex-direction: column;
+  align-items: center;
 }

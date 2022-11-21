@@ -5,8 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/style.css">
-    <script defer src="./js/cotizador.js"></script>
+    <!-- <script defer src="./js/cotizador.js"></script> -->
+    <script defer src="./js/scripts.js"></script>
     <title>CotizadorJS</title>
 </head>
 
@@ -15,19 +19,90 @@
 
     </header>
     <Main>
-        <h1>Segunda entrega trabajo final</h1>
+        <h1>Tercera entrega trabajo final</h1>
         <br>
         <h2>Castellanos, María Mercedes</h2>
         <br>
-        <p>Cotizador de seguros</p>
+        <div class="container login">
+            <h5>Ingresar</h5>
+            <form action="#">
+                <div class="row">
+                    <div class="form-floating mb-3 col">
+
+                        <input type="email" class="form-control" id="registeredUser" placeholder="name@example.com">
+                        <label for="floatingInput">Email</label>
+
+                    </div>
+                    <div class="form-floating col">
+                        <input type="password" class="form-control" id="registeredPassword" placeholder="Password">
+                        <label for="floatingPassword">Contraseña</label>
+                        <br>
+                        <input class="btn btn-primary" id='btnIngresar' type="submit" value="Ingresar">
+
+                    </div>
+                </div>
+            </form>
+
+        </div>
+        <div class="container" id="registrarse">
+            <div id="uUser"></div>
+            <br>
+            <button class="btn btn-primary" id="btnRegistrarse" type="submit" value="Registrarse">Registrarse</button>
+        </div>
+        <br>
+        <div id="newUser">
+
+            <form action="#" class="nUser">
+                <input type="number" name="dni" id="nDni" placeholder="Ingresá tu DNI">
+                <input type="text" name="Apellido" id="nUserApellido" placeholder="Ingresá tu apellido">
+                <input type="text" name="Nombre" id="nUserName" placeholder="Ingresá tu nombre" >
+                <input type="text" name="Domicilio" id="nUserDir" placeholder="Ingresá tu domicilio">
+                <input type="tel" name="Teléfono" id="nUserTel" placeholder="Número de teléfono">
+                <input type="email" name="mail" id="nUserMail" placeholder="tu-mail@.com">
+                <button class="btn btn-primary" id="btnEnviarDatos" type="submit">Enviar</button>
+                <div class="container" id="registrado"></div>
+            </form>
+        </div>
+
+        <br>
+        <div class="container-fluid hidden">
+            <h2>Bienvenidos al Sistema de Debat Seguros</h2>
+            <ul id="menuPrincipal">
+                <li class="container-fluid">
+                    <button type="button" class="btn btn-dark" id="cotizar">Cotizar</button>
+                    <form action="#" class="cotizarOk">
+                        <label>Ingrese el valor de la suma asegurada</label>
+                        <input type="number" id="sumaIngresada">
+                        <br>
+                        <button type="button" class="btn btn-dark" id="btnCalcular">Calcular</button>
+                    </form>
+                    <div id="resultadoCuota">
+
+                    </div>
+                </li>
+
+                <br>
+                <li class="container-fluid">
+                    <button type="button" class="btn btn-dark" id="btnDatos">Datos del Cliente</button>
+                </li>
+            </ul>
+            <div id="datosCliente">
+
+            </div>
+        </div>
+
+
     </Main>
     <footer>
-        
+
     </footer>
 
 
 
-    
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>

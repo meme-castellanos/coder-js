@@ -246,3 +246,6 @@ if (login()) {
   alert("No se pudo ingresar al sistema, verifique su contraseña");
 }
 alert("Gracias! Hasta Luego");
+array.forEach(element => {
+  
+});
